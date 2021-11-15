@@ -87,7 +87,7 @@ def set_handler(handler: logging.Handler) -> None:
         l.addHandler(handler)
 
 
-def get_logger(tag: str = "pythone-simple-http-server") -> logging.Logger:
+def get_logger(tag: str = "python-simple-http-server") -> logging.Logger:
     if tag not in __cache_loggers:
         __cache_loggers[tag] = CachingLogger(tag, _LOG_LEVEL_)
         for hdlr in _handlers:
